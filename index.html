@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>貝爾適國際有限公司</title>
+    <script src="js/modernizr.custom.63321.js"></script>
+    <link rel="stylesheet" href="css/animsition.min.css">
+
+    <link rel="shortcut icon" href="img/icon/貝爾適.ico">
+
+    <style>
+        * {
+            font-family: Arial, "微軟正黑體", "Microsoft JhengHei", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "標楷體", DFKai-SB, sans-serif;
+        }
+
+        body,
+        html {
+            margin: 0;
+            /* background-color: gray; */
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .header {
+            width: 100%;
+            /* height: calc(100vh - 195px); */
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* background-color: rgb(44, 43, 43); */
+        }
+
+        .logo {
+            width: 200px;
+            height: 70px;
+            margin-left: 8%;
+            text-align: center;
+            line-height: 70px;
+            background-image: url("img/logo/logo.jpg");
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+
+        .banner {
+            width: 1000px;
+            height: calc(100vh - 195px);
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .navbar {
+            height: 500px;
+            margin-right: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 20px;
+        }
+
+        .navbar a {
+            height: 80px;
+            width: 120px;
+            letter-spacing: 3px;
+            text-decoration: none;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: rgb(150, 148, 148);
+        }
+
+
+
+        .footer {
+            width: 100%;
+            height: 195px;
+            background-color: #CCCCCC;
+        }
+
+        .info {
+            height: 195px;
+            float: left;
+            display: inline-flex;
+            flex-direction: column;
+            font-size: 18px;
+        }
+
+        .info:nth-child(1) {
+            margin-left: 8%;
+            margin-right: 375px;
+        }
+
+
+        .address,
+        .phone {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .copyright {
+            position: absolute;
+            right: 30px;
+            bottom: 10px;
+        }
+
+        .mi-slider {
+            position: relative;
+            margin-top: 25%;
+            height: 490px;
+        }
+
+        .mi-slider ul {
+            list-style-type: none;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            overflow: hidden;
+            text-align: center;
+            pointer-events: none;
+            padding: 0;
+        }
+
+        .mi-slider ul.mi-current {
+            pointer-events: auto;
+        }
+
+        .mi-slider ul li {
+            display: inline-block;
+            width: 48%;
+            -webkit-transform: translateX(600%);
+            transform: translateX(600%);
+            -webkit-transition: opacity 0.2s linear;
+            transition: opacity 0.2s linear;
+        }
+
+        .mi-slider ul li a,
+        .mi-slider ul li img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .mi-slider ul li a {
+            outline: none;
+            cursor: pointer;
+        }
+
+        .mi-slider ul li img {
+            width: 65%;
+            border: none;
+        }
+
+        .mi-slider ul li h4 {
+            display: inline-block;
+            font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 20px 10px 0;
+            color: black;
+        }
+
+        .mi-slider ul li:hover {
+            opacity: 0.7;
+        }
+
+        .mi-slider nav {
+            position: relative;
+            top: 50vh;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            border-top: 5px solid #333;
+        }
+
+        .no-js nav {
+            display: none;
+        }
+
+        .mi-slider nav a {
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            padding: 40px 30px 30px 34px;
+            position: relative;
+            color: #888;
+            outline: none;
+            text-decoration: none;
+            -webkit-transition: color 0.2s linear;
+            transition: color 0.2s linear;
+        }
+
+        .mi-slider nav a:hover,
+        .mi-slider nav a.mi-selected {
+            color: #000;
+        }
+
+        .mi-slider nav a.mi-selected:after,
+        .mi-slider nav a.mi-selected:before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            border: solid transparent;
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .mi-slider nav a.mi-selected:after {
+            border-color: transparent;
+            border-top-color: #fff;
+            border-width: 20px;
+            left: 50%;
+            margin-left: -20px;
+        }
+
+        .mi-slider nav a.mi-selected:before {
+            border-color: transparent;
+            border-top-color: #333;
+            border-width: 27px;
+            left: 50%;
+            margin-left: -27px;
+        }
+
+        /* Move classes and animations */
+
+        .mi-slider ul:first-child li,
+        .no-js .mi-slider ul li {
+            -webkit-animation: scaleUp 350ms ease-in-out both;
+            animation: scaleUp 350ms ease-in-out both;
+        }
+
+        @-webkit-keyframes scaleUp {
+            0% {
+                -webkit-transform: translateX(0) scale(0);
+            }
+            100% {
+                -webkit-transform: translateX(0) scale(1);
+            }
+        }
+
+        @keyframes scaleUp {
+            0% {
+                -webkit-transform: translateX(0) scale(0);
+                transform: translateX(0) scale(0);
+            }
+            100% {
+                -webkit-transform: translateX(0) scale(1);
+                transform: translateX(0) scale(1);
+            }
+        }
+
+        .mi-slider ul:first-child li:first-child {
+            -webkit-animation-delay: 90ms;
+            animation-delay: 90ms;
+        }
+
+        .mi-slider ul:first-child li:nth-child(2) {
+            -webkit-animation-delay: 180ms;
+            animation-delay: 180ms;
+        }
+
+        .mi-slider ul:first-child li:nth-child(3) {
+            -webkit-animation-delay: 270ms;
+            animation-delay: 270ms;
+        }
+
+        .mi-slider ul:first-child li:nth-child(4) {
+            -webkit-animation-delay: 360ms;
+            animation-delay: 360ms;
+        }
+
+        /* moveFromRight */
+
+        .mi-slider ul.mi-moveFromRight li {
+            -webkit-animation: moveFromRight 350ms ease-in-out both;
+            animation: moveFromRight 350ms ease-in-out both;
+        }
+
+        /* moveFromLeft */
+
+        .mi-slider ul.mi-moveFromLeft li {
+            -webkit-animation: moveFromLeft 350ms ease-in-out both;
+            animation: moveFromLeft 350ms ease-in-out both;
+        }
+
+        /* moveToRight */
+
+        .mi-slider ul.mi-moveToRight li {
+            -webkit-animation: moveToRight 350ms ease-in-out both;
+            animation: moveToRight 350ms ease-in-out both;
+        }
+
+        /* moveToLeft */
+
+        .mi-slider ul.mi-moveToLeft li {
+            -webkit-animation: moveToLeft 350ms ease-in-out both;
+            animation: moveToLeft 350ms ease-in-out both;
+        }
+
+        /* Animation Delays */
+
+        .mi-slider ul.mi-moveToLeft li:first-child,
+        .mi-slider ul.mi-moveFromRight li:first-child,
+        .mi-slider ul.mi-moveToRight li:nth-child(4),
+        .mi-slider ul.mi-moveFromLeft li:nth-child(4) {
+            -webkit-animation-delay: 0ms;
+            animation-delay: 0ms;
+        }
+
+        .mi-slider ul.mi-moveToLeft li:nth-child(2),
+        .mi-slider ul.mi-moveFromRight li:nth-child(2),
+        .mi-slider ul.mi-moveToRight li:nth-child(3),
+        .mi-slider ul.mi-moveFromLeft li:nth-child(3) {
+            -webkit-animation-delay: 90ms;
+            animation-delay: 90ms;
+        }
+
+        .mi-slider ul.mi-moveToLeft li:nth-child(3),
+        .mi-slider ul.mi-moveFromRight li:nth-child(3),
+        .mi-slider ul.mi-moveToRight li:nth-child(2),
+        .mi-slider ul.mi-moveFromLeft li:nth-child(2) {
+            -webkit-animation-delay: 180ms;
+            animation-delay: 180ms;
+        }
+
+        .mi-slider ul.mi-moveToLeft li:nth-child(4),
+        .mi-slider ul.mi-moveFromRight li:nth-child(4),
+        .mi-slider ul.mi-moveToRight li:first-child,
+        .mi-slider ul.mi-moveFromLeft li:first-child {
+            -webkit-animation-delay: 270ms;
+            animation-delay: 270ms;
+        }
+
+        /* Animations */
+
+        @-webkit-keyframes moveFromRight {
+            0% {
+                -webkit-transform: translateX(600%);
+            }
+            100% {
+                -webkit-transform: translateX(0%);
+            }
+        }
+
+        @-webkit-keyframes moveFromLeft {
+            0% {
+                -webkit-transform: translateX(-600%);
+            }
+            100% {
+                -webkit-transform: translateX(0%);
+            }
+        }
+
+        @-webkit-keyframes moveToRight {
+            0% {
+                -webkit-transform: translateX(0%);
+            }
+            100% {
+                -webkit-transform: translateX(600%);
+            }
+        }
+
+        @-webkit-keyframes moveToLeft {
+            0% {
+                -webkit-transform: translateX(0%);
+            }
+            100% {
+                -webkit-transform: translateX(-600%);
+            }
+        }
+
+        @keyframes moveFromRight {
+            0% {
+                -webkit-transform: translateX(600%);
+                transform: translateX(600%);
+            }
+            100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes moveFromLeft {
+            0% {
+                -webkit-transform: translateX(-600%);
+                transform: translateX(-600%);
+            }
+            100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes moveToRight {
+            0% {
+                -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+            }
+            100% {
+                -webkit-transform: translateX(600%);
+                transform: translateX(600%);
+            }
+        }
+
+        @keyframes moveToLeft {
+            0% {
+                -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+            }
+            100% {
+                -webkit-transform: translateX(-600%);
+                transform: translateX(-600%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container animsition">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="banner">
+                <div id="mi-slider" class="mi-slider">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/product/避震.png" alt="img01">
+                                <h4>C (Classic)</h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/product/避震2.png" alt="img02">
+                                <h4>C1 (Classic+1)</h4>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/product/渦輪.png" alt="img05">
+                                <h4>SUBARU</h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/product/渦輪2.png" alt="img06">
+                                <h4>MITSUBISHI</h4>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/product/洩壓閥.png" alt="img09">
+                                <h4>Type A</h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/product/洩壓閥2.png" alt="img10">
+                                <h4>Type B</h4>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/product/煞車來令片.png" alt="img12">
+                                <h4>Sport Car</h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/product/煞車來令片2.png" alt="img13">
+                                <h4>Drift Car</h4>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/product/底盤拉桿.png" alt="img12">
+                                <h4>TRAILING & LATERAL LINK SET</h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/product/底盤拉桿2.png" alt="img13">
+                                <h4>Camber & toe kits</h4>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <nav>
+                        <a href="#">避震器</a>
+                        <a href="#">渦輪增壓器</a>
+                        <a href="#">洩壓閥</a>
+                        <a href="#">煞車來令片</a>
+                        <a href="#">底盤拉桿</a>
+                    </nav>
+                </div>
+
+            </div>
+            <div class="navbar">
+                <a href="product.html" class="animsition-link" data-animsition-out="fade-out-left">產品介紹</a>
+                <a href="technical.html" class="animsition-link" data-animsition-out="fade-out-right">技術特色</a>
+                <a href="application.html" class="animsition-link" data-animsition-out="fade-out-down">車型型號</a>
+                <a href="news.html" class="animsition-link" data-animsition-out="zoom-out">車隊快訊</a>
+                <a href="about.html" class="animsition-link" data-animsition-out="fade-out-up">關於我們</a>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="info">
+                <div class="address">
+                    地址: 台中市西屯區西林巷63-30號
+                </div>
+                <div class="fax">
+                    傳真: +886-4-24637856
+                </div>
+            </div>
+            <div class="info">
+                <div class="phone">
+                    電話: +886-4-24632111
+                </div>
+                <div class="email">
+                    信箱: info@wat.com.tw
+                </div>
+            </div>
+            <div class="copyright">
+                Copyright © 2018 WAT RACING.All Rights Reserved.
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.catslider.js"></script>
+
+    <script src="js/jquery.animsition.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        $(function () {
+
+            $('#mi-slider').catslider();
+
+        });
+    </script>
+</body>
+
+</html>
