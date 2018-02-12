@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>產品介紹 | 貝爾適</title>
+    <link rel="stylesheet" type="text/css" href="../css/quick-modal.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../img/icon/貝爾適.ico">
+
+
+    <style>
+        * {
+            font-family: Arial, "微軟正黑體", "Microsoft JhengHei", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "標楷體", DFKai-SB, sans-serif;
+        }
+
+        body,
+        html {
+            margin: 0;
+        }
+
+        #navbar {
+            width: 480px;
+            position: fixed;
+            left: 4.5%;
+            top: 10%;
+            width: 100px;
+            z-index: 500;
+        }
+
+        .fa {
+            font-size: 50px;
+            line-height: 70px;
+        }
+
+        .fa-bars {
+            color: #3498db;
+        }
+
+        #thePro {
+            overflow: hidden;
+            max-width: 1130px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+
+        #thePro::after {
+            content: "";
+            width: 676.8px;
+            height: 300px;
+        }
+
+        .home {
+            width: 200px;
+            height: 70px;
+            margin-top: 80px;
+        }
+
+        .home img {
+            width: 200px;
+            height: 70px;
+        }
+
+
+        .title {
+            width: 100%;
+            height: 55px;
+            background-color: #29ABE2;
+            position: relative;
+            margin-top: 70px;
+            margin-bottom: 70px;
+        }
+
+        .title h2 {
+            font-size: 25px;
+            width: 300px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            margin: 0 70px;
+            border-radius: 70%;
+            background-color: white;
+            overflow: hidden;
+            position: absolute;
+            top: -12.5px;
+        }
+
+
+        .proGroup {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        .proGroup:nth-child(3n+1) {
+            margin-left: 30px;
+        }
+
+        .proCard {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .proGroup img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: block;
+        }
+
+        .proGroup .detail {
+            display: block;
+            background: rgba(20, 20, 20, 0.2);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .proGroup .detail h3 {
+            font: 300 18px/1.1 Raleway, "Microsoft YaHei", Dosis, sans-serif;
+            text-align: center;
+            color: orange;
+        }
+
+        .proGroup .detail p {
+            font: 200 13px/1.2 Raleway, "Microsoft YaHei", Dosis, sans-serif;
+            text-align: left;
+            padding: 0 0.25em;
+        }
+
+        article {
+            clear: both;
+            font: 300 15px/1.2 Raleway, "Microsoft YaHei", Dosis, sans-serif;
+            margin: 2em auto;
+            max-width: 600px;
+        }
+
+        /* Older Browsers */
+
+        .proGroup.slide {
+            overflow: hidden;
+        }
+
+        .proGroup.slide .detail {
+            bottom: -364px;
+        }
+
+        /* Newer Browsers */
+
+        .proGroup.flip {
+            -webkit-perspective: 800px;
+            perspective: 800px;
+        }
+
+        .proGroup.flip .proCard {
+            -webkit-transition: -webkit-transform 1s ease;
+            transition: transform 1s ease;
+
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .proGroup.flip .detail,
+        .proGroup.flip .theFlip {
+            -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+        }
+
+        .proGroup.flip img,
+        .proGroup.flip .detail {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .container {
+            width: 300px;
+            height: 300px;
+        }
+
+        .container img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <script src="../js/modernizr.min.js"></script>
+</head>
+
+<body>
+    <div class="htmleaf-container">
+
+        <div id="navbar">
+            <span class="pop_ctrl">
+                <i class="fa fa-bars"></i>
+            </span>
+            <ul id="ul">
+                <li class="li">
+                    <a href="../product.html">
+                        <div>
+                            <img src="../img/icon/House3.png" alt="避震器" srcset="">
+                        </div>
+                        <div>產片介紹</div>
+                    </a>
+                </li>
+                <li class="demo_li">
+                    <a href="#coilover">
+                        <div>
+                            <img src="../img/product/避震.png" alt="避震器" srcset="">
+                        </div>
+                        <div>避震器</div>
+                    </a>
+                </li>
+
+                <li class="demo_li">
+                    <a href="#turbocharger">
+                        <div>
+                            <img src="../img/product/渦輪.png" alt="渦輪增壓器" srcset="">
+                        </div>
+                        <div>渦輪增壓器</div>
+                    </a>
+                </li>
+                <li class="demo_li">
+                    <a href="#wastegate">
+                        <div>
+                            <img src="../img/product/洩壓閥.png" alt="洩壓閥" srcset="">
+                        </div>
+                        <div>洩壓閥</div>
+                    </a>
+                </li>
+                <li class="demo_li">
+                    <a href="#brakePad">
+                        <div>
+                            <img src="../img/product/煞車來令片.png" alt="煞車來令片" srcset="">
+                        </div>
+                        <div>煞車來令片</div>
+                    </a>
+                </li>
+                <li class="demo_li">
+                    <a href="#suspensionKit">
+                        <div>
+                            <img src="../img/product/底盤拉桿.png" alt="底盤拉桿" srcset="">
+                        </div>
+                        <div>底盤拉桿</div>
+                </li>
+                </a>
+            </ul>
+        </div>
+
+
+        <div id="thePro">
+
+            <div class="home">
+                <a href="../index.html">
+                    <img src="../img/logo/logo.jpg" alt="" srcset="">
+                </a>
+            </div>
+
+            <div class="title" id="coilover">
+                <h2>產品介紹 / 避震器</h2>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/避震.png">
+                    <div class="detail">
+                        <h3>C (Classic)</h3>
+                        <ul>
+                            <li>可用於 道路、山路、甩尾、賽道、柏油路 使用。</li>
+                            <li>可調高低長度、彈簧高低可調。</li>
+                            <li>40段阻尼可調。</li>
+                            <li>上座魚眼可調設計。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/避震2.png">
+                    <div class="detail">
+                        <h3>C1 (Classic+1)</h3>
+                        <ul>
+                            <li>可用於 道路、山路、甩尾、賽道、柏油路 使用。</li>
+                            <li>可調高低長度、彈簧高低可調。</li>
+                            <li>阻尼伸側38段可調、氮氣瓶縮測12段可調。</li>
+                            <li>上座魚眼可調設計。</li>
+                            <li>阻尼可客製，重新設定。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/避震3.png">
+                    <div class="detail">
+                        <h3>LC(LW-Classic)</h3>
+                        <ul>
+                            <li>輕量化鋁合金桶身設計</li>
+                            <li>可用於 道路、山路、甩尾、賽道、柏油路 使用。</li>
+                            <li>可調高低長度、彈簧高低可調。</li>
+                            <li>38段阻尼可調、阻尼回彈速度可調。</li>
+                            <li>A-ARM系統專屬</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/避震4.png">
+                    <div class="detail">
+                        <h3>LC1(LW-Classic 1+)</h3>
+                        <ul>
+                            <li>輕量化鋁合金桶身設計</li>
+                            <li>可用於 道路、山路、甩尾、賽道、柏油路 使用。</li>
+                            <li>可調高低長度、彈簧高低可調。</li>
+                            <li>阻尼伸側38段可調、氮氣瓶縮測12段可調。</li>
+                            <li>阻尼可客製，重新設定。</li>
+                            <li>A- Arm 系統專屬</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/避震5.png">
+                    <div class="detail">
+                        <h3>R2(Racing +2)</h3>
+                        <ul>
+                            <li>可用於 山路、甩尾、賽道 使用。</li>
+                            <li>可調高低長度、彈簧高低可調。</li>
+                            <li>38段伸側阻尼可調。</li>
+                            <li>上座魚眼可調設計。</li>
+                            <li>氮氣單瓶縮側12+12段可調。</li>
+                            <li>阻尼可客製，重新設定。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/避震6.png">
+                    <div class="detail">
+                        <h3>R2S(Racing+2 S-Type)</h3>
+                        <ul>
+                            <li>可用於甩尾、賽道 使用。</li>
+                            <li>可調高低長度、彈簧高低可調。</li>
+                            <li>40段阻尼可調、阻尼回彈速度可調。</li>
+                            <li>上座魚眼可調設計。</li>
+                            <li>氮氣單瓶縮側可調12+12段。</li>
+                            <li>阻尼可客製，重新設定。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/避震7.png">
+                    <div class="detail">
+                        <h3>I(Invert)</h3>
+                        <ul>
+                            <li>倒叉式，可用於甩尾、赛道、拉力使用。</li>
+                            <li>高剛性設計，可承受甩尾，赛道，拉力的激烈操駕。</li>
+                            <li>可調高低長度、弹簧高低可調。</li>
+                            <li>38段阻尼可调。</li>
+                            <li>上座鱼眼可调设计。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/避震8.png">
+                    <div class="detail">
+                        <h3>I1(Invert +1)</h3>
+                        <ul>
+                            <li>倒叉式，可用於甩尾、赛道、拉力使用。</li>
+                            <li>高刚性设计，可承受甩尾，赛道，拉力的激烈操驾。</li>
+                            <li>可调高低长度、弹簧高低可调。</li>
+                            <li>38段阻尼可调、阻尼回弹速度可调。</li>
+                            <li>上座鱼眼可调设计。</li>
+                            <li>氮氣單瓶可調12段。</li>
+                            <li>阻尼可客製，重新設定。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/避震9.png">
+                    <div class="detail">
+                        <h3>RC/ Gravel Rally</h3>
+                        <ul>
+                            <li>拉力賽專屬設計</li>
+                            <li>上下座使用高強度鐵加厚鐵焊設計，倒插式增加剛性</li>
+                            <li>阻尼特殊調校，可依照比賽車全方面客製化設定</li>
+                            <li> 57mm大筒身設計，可容納較多油量，抑制油溫溫升。</li>
+                            <li>可依客戶使用單/雙向可調式設計。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="title" id="turbocharger">
+                <h2>產品介紹 / 渦輪增壓器</h2>
+            </div>
+
+            <div class="container">
+                <a href="#" class="open-modal" data-modal-id="my-modal">
+                    <img src="../img/product/渦輪.png">
+                </a>
+            </div>
+            <div id="my-modal" class="qm-modal">
+                <div class="qm-close-modal"></div>
+
+                <img src="../img/product/渦輪.png">
+                <h3>WRX/STI - TD05H-16G</h3>
+                <table border="1" cellpadding="3" cellspacing="0" style="width:400px">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Complete Turbo</td>
+                            <td colspan="2">Compressor</td>
+                            <td colspan="2">Turbine</td>
+                        </tr>
+                        <tr>
+                            <td>SYSTEM</td>
+                            <td>Journal Bearing</td>
+                            <td>A/R</td>
+                            <td>49</td>
+                            <td>Nozzle Area</td>
+                            <td>7cm
+                                <sup>2</sup>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MODEL</td>
+                            <td>TD05H-16G</td>
+                            <td>Wheel Dia.</td>
+                            <td>48.3/68 mm</td>
+                            <td>Wheel Dia</td>
+                            <td>49.2/56</td>
+                        </tr>
+                        <tr>
+                            <td>P/N</td>
+                            <td>S5167</td>
+                            <td>CFM</td>
+                            <td>580</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Application</td>
+                            <td>EJ20Impreza/WRX/STI</td>
+                            <td>Actuator</td>
+                            <td>0.9 Bar</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>MAX HP</td>
+                            <td>380+ HP</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container">
+                <a href="#" class="open-modal" data-modal-id="my-modal2">
+                    <img src="../img/product/渦輪.png">
+                </a>
+            </div>
+            <div id="my-modal2" class="qm-modal">
+                <div class="qm-close-modal"></div>
+
+                <img src="../img/product/渦輪.png">
+                <h3>WRX/STI - TD05H-18G</h3>
+                <table border="1" cellpadding="3" cellspacing="0" style="width:405px">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Complete Turbo</td>
+                            <td colspan="2">Compressor</td>
+                            <td colspan="2">Turbine</td>
+                        </tr>
+                        <tr>
+                            <td>SYSTEM</td>
+                            <td>Journal Bearing</td>
+                            <td>A/R</td>
+                            <td>49</td>
+                            <td>Nozzle Area</td>
+                            <td>8cm
+                                <sup>2</sup>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MODEL</td>
+                            <td>TD05H-18G</td>
+                            <td>Wheel Dia.</td>
+                            <td>50.5/68 mm</td>
+                            <td>Wheel Dia</td>
+                            <td>49.2/56</td>
+                        </tr>
+                        <tr>
+                            <td>P/N</td>
+                            <td>S5188</td>
+                            <td>CFM</td>
+                            <td>590</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Application</td>
+                            <td>EJ20Impreza/WRX/STI</td>
+                            <td>Actuator</td>
+                            <td>0.9 Bar</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>MAX HP</td>
+                            <td>420+ HP</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="container">
+                <a href="#" class="open-modal" data-modal-id="my-modal3">
+                    <img src="../img/product/渦輪tybeb.png">
+                </a>
+            </div>
+            <div id="my-modal3" class="qm-modal">
+                <div class="qm-close-modal"></div>
+
+                <img src="../img/product/渦輪tybeb.png">
+                <h3>WRX/STI - TD05H-20G-1</h3>
+                <table border="1" cellpadding="3" cellspacing="0" style="width:405px">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Complete Turbo</td>
+                            <td colspan="2">Compressor</td>
+                            <td colspan="2">Turbine</td>
+                        </tr>
+                        <tr>
+                            <td>SYSTEM</td>
+                            <td>Journal Bearing</td>
+                            <td>A/R</td>
+                            <td>49</td>
+                            <td>Nozzle Area</td>
+                            <td>7cm
+                                <sup>2</sup>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MODEL</td>
+                            <td>TD05H-20G-1</td>
+                            <td>Wheel Dia.</td>
+                            <td>52.6/68 mm</td>
+                            <td>Wheel Dia</td>
+                            <td>49.2/56</td>
+                        </tr>
+                        <tr>
+                            <td>P/N</td>
+                            <td>S5207</td>
+                            <td>CFM</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Application</td>
+                            <td>EJ20Impreza/WRX/STI</td>
+                            <td>Actuator</td>
+                            <td>0.9 Bar</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>MAX HP</td>
+                            <td>430+ HP</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="container">
+                <a href="#" class="open-modal" data-modal-id="my-modal4">
+                    <img src="../img/product/渦輪.png">
+                </a>
+            </div>
+            <div id="my-modal4" class="qm-modal">
+                <div class="qm-close-modal"></div>
+
+                <img src="../img/product/渦輪.png">
+                <h3>WRX/STI - TD05H-20G-2</h3>
+                <table border="1" cellpadding="3" cellspacing="0" style="width:405px">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Complete Turbo</td>
+                            <td colspan="2">Compressor</td>
+                            <td colspan="2">Turbine</td>
+                        </tr>
+                        <tr>
+                            <td>SYSTEM</td>
+                            <td>Journal Bearing</td>
+                            <td>A/R</td>
+                            <td>57</td>
+                            <td>Nozzle Area</td>
+                            <td>8cm
+                                <sup>2</sup>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MODEL</td>
+                            <td>TD05H-20G-2</td>
+                            <td>Wheel Dia.</td>
+                            <td>52.6/68 mm</td>
+                            <td>Wheel Dia</td>
+                            <td>49.2/56</td>
+                        </tr>
+                        <tr>
+                            <td>P/N</td>
+                            <td>S5208</td>
+                            <td>CFM</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Application</td>
+                            <td>EJ20Impreza/WRX/STI</td>
+                            <td>Actuator</td>
+                            <td>0.9 Bar</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>MAX HP</td>
+                            <td>450+ HP</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="container">
+                <a href="#" class="open-modal" data-modal-id="my-modal5">
+                    <img src="../img/product/渦輪tybeb.png">
+                </a>
+            </div>
+            <div id="my-modal5" class="qm-modal">
+                <div class="qm-close-modal"></div>
+
+                <img src="../img/product/渦輪tybeb.png">
+                <h3>WRX/STI - TD06H-20G-1</h3>
+                <table border="1" cellpadding="3" cellspacing="0" style="width:405px">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Complete Turbo</td>
+                            <td colspan="2">Compressor</td>
+                            <td colspan="2">Turbine</td>
+                        </tr>
+                        <tr>
+                            <td>SYSTEM</td>
+                            <td>Journal Bearing</td>
+                            <td>A/R</td>
+                            <td>49</td>
+                            <td>Nozzle Area</td>
+                            <td>7cm
+                                <sup>2</sup>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MODEL</td>
+                            <td>TD05H-20G-1</td>
+                            <td>Wheel Dia.</td>
+                            <td>52.6/68 mm</td>
+                            <td>Wheel Dia</td>
+                            <td>54.08/61</td>
+                        </tr>
+                        <tr>
+                            <td>P/N</td>
+                            <td>S6207</td>
+                            <td>CFM</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Application</td>
+                            <td>WRX/STI</td>
+                            <td>Actuator</td>
+                            <td>0.9 Bar</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>MAX HP</td>
+                            <td>450+ HP</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container">
+                <a href="#" class="open-modal" data-modal-id="my-modal6">
+                    <img src="../img/product/渦輪.png">
+                </a>
+            </div>
+            <div id="my-modal6" class="qm-modal">
+                <div class="qm-close-modal"></div>
+
+                <img src="../img/product/渦輪.png">
+                <h3>WRX/STI - TD06H-20G-2</h3>
+                <table border="1" cellpadding="3" cellspacing="0" style="width:405px">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Complete Turbo</td>
+                            <td colspan="2">Compressor</td>
+                            <td colspan="2">Turbine</td>
+                        </tr>
+                        <tr>
+                            <td>SYSTEM</td>
+                            <td>Journal Bearing</td>
+                            <td>A/R</td>
+                            <td>49</td>
+                            <td>Nozzle Area</td>
+                            <td>8cm
+                                <sup>2</sup>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MODEL</td>
+                            <td>TD06H-20G-2</td>
+                            <td>Wheel Dia.</td>
+                            <td>52.6/68 mm</td>
+                            <td>Wheel Dia</td>
+                            <td>54.08/61</td>
+                        </tr>
+                        <tr>
+                            <td>P/N</td>
+                            <td>S6208</td>
+                            <td>CFM</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Application</td>
+                            <td>EJ20Impreza/WRX/STI</td>
+                            <td>Actuator</td>
+                            <td>0.9 Bar</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>MAX HP</td>
+                            <td>450+ HP</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container">
+                <a href="#" class="open-modal" data-modal-id="my-modal7">
+                    <img src="../img/product/渦輪2.png">
+                </a>
+            </div>
+            <div id="my-modal7" class="qm-modal">
+                <div class="qm-close-modal"></div>
+
+                <img src="../img/product/渦輪2.png">
+                <h3>EVOI~III - TD05H-16G</h3>
+                <table border="1" cellpadding="3" cellspacing="0" style="width:405px">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <div>
+                                    <div>Complete Turbo</div>
+                                </div>
+                            </td>
+                            <td colspan="2">
+                                <div>
+                                    <div>Compressor</div>
+                                </div>
+                            </td>
+                            <td colspan="2">
+                                <div>
+                                    <div>Turbine</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>SYSTEM</div>
+                            </td>
+                            <td>
+                                <div>Journal Bearing</div>
+                            </td>
+                            <td>
+                                <div>A/R</div>
+                            </td>
+                            <td>
+                                <div>49</div>
+                            </td>
+                            <td>
+                                <div>Nozzle Area</div>
+                            </td>
+                            <td>
+                                <div>7cm
+                                    <sup>2</sup>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>MODEL</div>
+                            </td>
+                            <td>
+                                <div>TD05H-16G</div>
+                            </td>
+                            <td>
+                                <div>Wheel Dia.</div>
+                            </td>
+                            <td>
+                                <div>48.3/68 mm</div>
+                            </td>
+                            <td>
+                                <div>Wheel Dia</div>
+                            </td>
+                            <td>
+                                <div>49.2/56</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>P/N</div>
+                            </td>
+                            <td>
+                                <div>M5167</div>
+                            </td>
+                            <td>
+                                <div>CFM</div>
+                            </td>
+                            <td>
+                                <div>580</div>
+                            </td>
+                            <td>
+                                <div>&nbsp;</div>
+                            </td>
+                            <td>
+                                <div>&nbsp;</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>Application</div>
+                            </td>
+                            <td>
+                                <div>4G63 EVO3/Eclipse/VR4</div>
+                            </td>
+                            <td>
+                                <div>Actuator</div>
+                            </td>
+                            <td>
+                                <div>0.8 Bar</div>
+                            </td>
+                            <td>
+                                <div>&nbsp;</div>
+                            </td>
+                            <td>
+                                <div>&nbsp;</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>MAX HP</div>
+                            </td>
+                            <td>
+                                <div>380+ HP</div>
+                            </td>
+                            <td>
+                                <div>&nbsp;</div>
+                            </td>
+                            <td>
+                                <div>&nbsp;</div>
+                            </td>
+                            <td>
+                                <div>&nbsp;</div>
+                            </td>
+                            <td>
+                                <div>&nbsp;</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div class="container">
+                <a href="#" class="open-modal" data-modal-id="my-modal8">
+                    <img src="../img/product/渦輪2.png">
+                </a>
+            </div>
+            <div id="my-modal8" class="qm-modal">
+                <div class="qm-close-modal"></div>
+
+                <img src="../img/product/渦輪2.png">
+                <h3>EVOI~III - TD05H-20G</h3>
+                <table border="1" cellpadding="3" cellspacing="0" style="width:405px">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Complete Turbo</td>
+                            <td colspan="2">Compressor</td>
+                            <td colspan="2">Turbine</td>
+                        </tr>
+                        <tr>
+                            <td>SYSTEM</td>
+                            <td>Journal Bearing</td>
+                            <td>A/R</td>
+                            <td>49</td>
+                            <td>Nozzle Area</td>
+                            <td>7cm
+                                <sup>2</sup>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MODEL</td>
+                            <td>TD05H-20G</td>
+                            <td>Wheel Dia.</td>
+                            <td>52.6/68 mm</td>
+                            <td>Wheel Dia</td>
+                            <td>49.2/56</td>
+                        </tr>
+                        <tr>
+                            <td>P/N</td>
+                            <td>M5207</td>
+                            <td>CFM</td>
+                            <td>580</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Application</td>
+                            <td>4G63 EVO3/Eclipse/VR4</td>
+                            <td>Actuator</td>
+                            <td>0.8 Bar</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>MAX HP</td>
+                            <td>430+ HP</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container">
+                <a href="#" class="open-modal" data-modal-id="my-modal9">
+                    <img src="../img/product/渦輪2typeb.png">
+                </a>
+            </div>
+            <div id="my-modal9" class="qm-modal">
+                <div class="qm-close-modal"></div>
+
+                <img src="../img/product/渦輪2typeb.png">
+                <h3>EVO IV~VIII - TD05H-16G</h3>
+                <table border="1" cellpadding="3" cellspacing="0" style="width:405px">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Complete Turbo</td>
+                            <td colspan="2">Compressor</td>
+                            <td colspan="2">Turbine</td>
+                        </tr>
+                        <tr>
+                            <td>SYSTEM</td>
+                            <td>Journal Bearing</td>
+                            <td>A/R</td>
+                            <td>49</td>
+                            <td>Nozzle Area</td>
+                            <td>10.5cm
+                                <sup>2</sup>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MODEL</td>
+                            <td>TD05HR-16G</td>
+                            <td>Wheel Dia.</td>
+                            <td>48.3/68 mm</td>
+                            <td>Wheel Dia</td>
+                            <td>49.2/56</td>
+                        </tr>
+                        <tr>
+                            <td>P/N</td>
+                            <td>M5160</td>
+                            <td>CFM</td>
+                            <td>580</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Application</td>
+                            <td>4G63 EVOIV~VIII</td>
+                            <td>Actuator</td>
+                            <td>1 Bar</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>MAX HP</td>
+                            <td>380+ HP</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="container">
+                <a href="#" class="open-modal" data-modal-id="my-modal10">
+                    <img src="../img/product/渦輪2typeb.png">
+                </a>
+            </div>
+            <div id="my-modal10" class="qm-modal">
+                <div class="qm-close-modal"></div>
+
+                <img src="../img/product/渦輪2typeb.png">
+                <h3>EVO IV~VIII - TD05H-20G</h3>
+                <table border="1" cellpadding="3" cellspacing="0" style="width:405px">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Complete Turbo</td>
+                            <td colspan="2">Compressor</td>
+                            <td colspan="2">Turbine</td>
+                        </tr>
+                        <tr>
+                            <td>SYSTEM</td>
+                            <td>Journal Bearing</td>
+                            <td>A/R</td>
+                            <td>58</td>
+                            <td>Nozzle Area</td>
+                            <td>10.5cm
+                                <sup>2</sup>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MODEL</td>
+                            <td>TD05HR-20G</td>
+                            <td>Wheel Dia.</td>
+                            <td>52.6/68 mm</td>
+                            <td>Wheel Dia</td>
+                            <td>49.2/56</td>
+                        </tr>
+                        <tr>
+                            <td>P/N</td>
+                            <td>M5200</td>
+                            <td>CFM</td>
+                            <td>580</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Application</td>
+                            <td>4G63 EVOIV~VIII</td>
+                            <td>Actuator</td>
+                            <td>1 Bar</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>MAX HP</td>
+                            <td>430+ HP</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container">
+                <a href="#" class="open-modal" data-modal-id="my-modal11">
+                    <img src="../img/product/渦輪3.png">
+                </a>
+            </div>
+            <div id="my-modal11" class="qm-modal">
+                <div class="qm-close-modal"></div>
+
+                <img src="../img/product/渦輪3.png">
+                <h3>UNIVERSAL - TD06H-20G</h3>
+                <table border="1" cellpadding="3" cellspacing="0" style="width:405px">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Complete Turbo</td>
+                            <td colspan="2">Compressor</td>
+                            <td colspan="2">Turbine</td>
+                        </tr>
+                        <tr>
+                            <td>SYSTEM</td>
+                            <td>Journal Bearing</td>
+                            <td>A/R</td>
+                            <td>89</td>
+                            <td>Nozzle Area</td>
+                            <td>8cm
+                                <sup>2</sup>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MODEL</td>
+                            <td>TD06H-20G-Universal</td>
+                            <td>Wheel Dia.</td>
+                            <td>52.6/68 mm</td>
+                            <td>Wheel Dia</td>
+                            <td>54.08/61</td>
+                        </tr>
+                        <tr>
+                            <td>P/N</td>
+                            <td>U6208</td>
+                            <td>CFM</td>
+                            <td>640</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Application</td>
+                            <td>TRIANGLE FLANGE</td>
+                            <td>Actuator</td>
+                            <td>
+                                <p>External</p>
+
+                                <p>wastegate</p>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>MAX HP</td>
+                            <td>430+ HP</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container"></div>
+
+
+
+            <div class="title" id="wastegate">
+                <h2>產品介紹 / 洩壓閥</h2>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/洩壓閥.png">
+                    <div class="detail">
+                        <h3>Type A</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/洩壓閥2.png">
+                    <div class="detail">
+                        <h3>Type B</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="title" id="brakePad">
+                <h2>產品介紹 / 煞車來令片</h2>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/煞車來令片.png">
+                    <div class="detail">
+                        <h3>Sport Car</h3>
+                        <ul>
+                            <li>道路普通使用</li>
+                            <li>工作溫度：0~700度</li>
+                            <li>摩擦系列 0.5~06μ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/煞車來令片2.png">
+                    <div class="detail">
+                        <h3>Drift Car</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/煞車來令片3.png">
+                    <div class="detail">
+                        <h3>Racing Car</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="title" id="suspensionKit">
+                <h2>產品介紹 / 底盤拉桿</h2>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/底盤拉桿.png">
+                    <div class="detail">
+                        <h3>TRAILING & LATERAL LINK SET</h3>
+                        <ul>
+                            <li>全可調式底盤強化連桿 </li>
+                            <li>MAZDA / 3 / 6 . FORD / Focus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/底盤拉桿2.png">
+                    <div class="detail">
+                        <h3>Camber & toe kits</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/底盤拉桿3.png">
+                    <div class="detail">
+                        <h3>Trailing & Link set</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="proGroup slide">
+                <div class="proCard">
+                    <img src="../img/product/底盤拉桿4.png">
+                    <div class="detail">
+                        <h3>Toe Kits</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.easing.min.js"></script>
+    <script src="../js/jquery.popmenu.min.js"></script>
+    <script src="../js/jquery.quick-modal.js"></script>
+    <script>
+
+        $(function () {
+            if ($('html').hasClass('csstransforms3d')) {
+                $('.proGroup').removeClass('slide').addClass('flip');
+                $('.proGroup.flip').on('mouseenter',
+                    function () {
+                        $(this).find('.proCard').addClass('theFlip');
+                    });
+                $('.proGroup.flip').on('mouseleave',
+                    function () {
+                        $(this).find('.proCard').removeClass('theFlip');
+                    });
+            } else {
+                $('.proGroup').on('mouseenter',
+                    function () {
+                        $(this).find('.detail').stop().animate({
+                            bottom: 0
+                        }, 500, 'easeOutCubic');
+                    });
+                $('.proGroup').on('mouseleave',
+                    function () {
+                        $(this).find('.detail').stop().animate({
+                            bottom: ($(this).height() + -1)
+                        }, 500, 'easeOutCubic');
+                    });
+            }
+        });
+
+
+        /* ----------------------------------------
+                                                            prettyPre Plugin by Tim Medora（pre格式代码显示插件）
+                                                            ---------------------------------------- */
+        (function ($) {
+
+            $.fn.prettyPre = function (method) {
+                var defaults = {
+                    ignoreExpression: /\s/ // what should be ignored?
+                };
+                var methods = {
+                    init: function (options) {
+                        this.each(function () {
+                            var context = $.extend({}, defaults, options);
+                            var $obj = $(this);
+                            var usingInnerText = true;
+                            var text = $obj.get(0).innerText;
+                            // some browsers support innerText...some don't...some ONLY work with innerText.
+                            if (typeof text == "undefined") {
+                                text = $obj.html();
+                                usingInnerText = false;
+                            }
+                            // use the first line as a baseline for how many unwanted leading whitespace characters are present
+                            var superfluousSpaceCount = 0;
+                            var pos = 0;
+                            var currentChar = text.substring(0, 1);
+                            while (context.ignoreExpression.test(currentChar)) {
+                                if (currentChar !== "\n") {
+                                    superfluousSpaceCount++;
+                                } else {
+                                    superfluousSpaceCount = 0;
+                                }
+                                currentChar = text.substring(++pos, pos + 1);
+                            }
+                            // split
+                            var parts = text.split("\n");
+                            var reformattedText = "";
+                            // reconstruct
+                            var length = parts.length;
+                            for (var i = 0; i < length; i++) {
+                                // remove leading whitespace (represented by an empty string)
+                                if (i === 0 && parts[0] === "") {
+                                    continue;
+                                }
+                                // cleanup, and don't append a trailing newline if we are on the last line
+                                reformattedText += parts[i].substring(superfluousSpaceCount) +
+                                    (i == length - 1 ? "" : "\n");
+                            }
+                            // modify original
+                            if (usingInnerText) {
+                                $obj.get(0).innerText = reformattedText;
+                            } else {
+                                // This does not appear to execute code in any browser but the onus is on the developer to not 
+                                // put raw input from a user anywhere on a page, even if it doesn't execute!
+                                $obj.html(reformattedText);
+                            }
+                        });
+                    }
+                }
+                if (methods[method]) {
+                    return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+                } else if (typeof method === "object" || !method) {
+                    return methods.init.apply(this, arguments);
+                } else {
+                    $.error("Method " + method + " does not exist on jQuery.prettyPre.");
+                }
+            }
+        })(jQuery);
+
+        $(document).ready(function () {
+            $('pre').prettyPre();
+        });
+
+        /* ----------------------------------------
+        Demo-Specific Scripts（模态窗口示例需要的初始化代码）
+        ---------------------------------------- */
+        $(document).ready(function () {
+            $('.open-modal').quickModal();
+        });
+
+        $(function () {
+            $('#navbar').popmenu({ 'width': '500px', 'iconSize': '250px' });
+            // 'controller': true,       //设定是否使用控制按钮，设置为false，菜单将一直显示
+            // 'width': '300px',         //菜单总宽度
+            // 'background': '#34495e',  //菜单背景色
+            // 'focusColor': '#1abc9c',  //菜单按钮hover时颜色
+            // 'borderRadius': '10px',   //边角弧度，设置为0，为直角
+            // 'top': '50',              //上移距离，向上移动多少就设置为多少
+            // 'left': '0',              //左移距离，设置同上
+            // 'iconSize': '100px'       //菜单按钮大小，目前是正方形设计（宽高相同）
+        })
+    </script>
+</body>
+
+</html>
