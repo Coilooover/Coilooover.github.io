@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>車型型號 | 貝爾適</title>
+    <link rel="stylesheet" href="css/animsition.min.css">
+
+    <link rel="shortcut icon" href="img/icon/貝爾適.ico">
+
+    <style>
+        * {
+            font-family: Arial, "微軟正黑體", "Microsoft JhengHei", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "標楷體", DFKai-SB, sans-serif;
+        }
+
+        body,
+        html {
+            margin: 0;
+        }
+
+
+
+
+        .navbar {
+            width: 1130px;
+            height: 50px;
+            font-size: 20px;
+            background-color: #29ABE2;
+            display: flex;
+            margin: 40px 0;
+            position: relative;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 4;
+        }
+
+        .navbar a {
+            width: 20%;
+            text-decoration: none;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 6;
+        }
+
+        .application {
+            font-size: 30px;
+        }
+
+        .thisPage {
+            width: 18%;
+            height: 80px;
+            border-radius: 100%;
+            background-color: white;
+            overflow: hidden;
+            position: absolute;
+            top: -15px;
+            left: 41%;
+            z-index: 5;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-out;
+        }
+
+        .technical:hover,
+        .product:hover,
+        .news:hover,
+        .about:hover {
+            font-size: 30px;
+        }
+
+        .technical:hover~.thisPage {
+            left: 21%;
+        }
+
+        .product:hover~.thisPage {
+            left: 1%;
+        }
+
+        .news:hover~.thisPage {
+            left: 61%;
+        }
+
+        .about:hover~.thisPage {
+            left: 81%;
+        }
+
+        .mid_logo {
+            height: 220px;
+            width: 520px;
+            margin: auto;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .mid_logoimg {
+            height: 100%;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .inside_logoimg {
+            max-width: 200px;
+            max-height: 150px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .logo_line {
+            width: 700px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            background-color: #fff;
+        }
+
+        .logo_box_S {
+            padding: 5% 0;
+            height: 150px;
+            width: 200px;
+            position: relative;
+            margin: auto;
+        }
+
+        .footer {
+            width: 100%;
+            height: 80px;
+            background-color: #CCCCCC;
+            font-size: 18px;
+            position: relative;
+            bottom: 0;
+            margin-top: 50px;
+        }
+
+        .info {
+            max-width: 1130px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .copyright {
+            max-width: 1130px;
+            width: 100%;
+            margin: 35px auto 0 auto;
+            text-align: center;
+        }
+
+        @media screen and (max-width:992px) {
+            .mid_logo {
+                width: 100%;
+            }
+            .logo_line {
+                width: 80%;
+            }
+
+        }
+
+        @media screen and (max-width:768px) {
+            .logo_box_S {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:576px) {
+            .mid_logo {
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container animsition">
+
+        <div class="navbar">
+            <a href="product.html" class="animsition-link product" data-animsition-out="fade-out-left">產品介紹</a>
+            <a href="technical.html" class="animsition-link technical" data-animsition-out="fade-out-right">技術特色</a>
+            <a href="application.html" class="animsition-link application" data-animsition-out="fade-out-down">車型型號</a>
+            <a href="news.html" class="animsition-link news" data-animsition-out="zoom-out">車隊快訊</a>
+            <a href="about.html" class="animsition-link about" data-animsition-out="fade-out-up">關於我們</a>
+            <div class="thisPage"></div>
+        </div>
+
+        <div class="mid_logo">
+            <a href="index.html">
+                <img src="img/application/indextop.jpg" class="mid_logoimg" alt="">
+            </a>
+        </div>
+        <div class="logo_box_L">
+            <div class="logo_line1 logo_line">
+                <div class="logo_line1_1 logo_box_S">
+                    <a href="application/car(1).html">
+                        <img src="img/application/m01.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+                <div class="logo_line1_2 logo_box_S">
+                    <a href="application/car(2).html">
+                        <img src="img/application/m02.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+                <div class="logo_line1_3 logo_box_S">
+                    <a href="application/car(3).html">
+                        <img src="img/application/m03.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="logo_line2 logo_line">
+                <div class="logo_line1_1 logo_box_S">
+                    <a href="application/car(4).html">
+                        <img src="img/application/m04.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+                <div class="logo_line1_2 logo_box_S">
+                    <a href="application/car(5).html">
+                        <img src="img/application/m05.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+                <div class="logo_line1_3 logo_box_S">
+                    <a href="application/car(6).html">
+                        <img src="img/application/m06.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="logo_line3 logo_line">
+                <div class="logo_line1_1 logo_box_S">
+                    <a href="application/car(7).html">
+                        <img src="img/application/m07.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+                <div class="logo_line1_2 logo_box_S">
+                    <a href="application/car(8).html">
+                        <img src="img/application/m08.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+                <div class="logo_line1_3 logo_box_S">
+                    <a href="application/car(9).html">
+                        <img src="img/application/m09.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="logo_line4 logo_line">
+                <div class="logo_line1_1 logo_box_S">
+                    <a href="application/car(10).html">
+                        <img src="img/application/m10.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+                <div class="logo_line1_2 logo_box_S">
+                    <a href="application/car(11).html">
+                        <img src="img/application/m11.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+                <div class="logo_line1_3 logo_box_S">
+                    <a href="application/car(12).html">
+                        <img src="img/application/m12.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="logo_line5 logo_line">
+                <div class="logo_line1_1 logo_box_S">
+                    <a href="application/car(13).html">
+                        <img src="img/application/m13.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+                <div class="logo_line1_2 logo_box_S">
+                    <a href="application/car(14).html">
+                        <img src="img/application/m14.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+                <div class="logo_line1_3 logo_box_S">
+                    <a href="application/car(15).html">
+                        <img src="img/application/m15.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="logo_line6 logo_line">
+                <div class="logo_line1_1 logo_box_S">
+                    <a href="application/car(16).html">
+                        <img src="img/application/m16.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+                <div class="logo_line1_2 logo_box_S">
+                    <a href="application/car(17).html">
+                        <img src="img/application/m17.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+                <div class="logo_line1_3 logo_box_S">
+                    <a href="application/car(18).html">
+                        <img src="img/application/m18.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="logo_line7 logo_line">
+                <div class="logo_line1_1 logo_box_S">
+                    <a href="application/car(19).html">
+                        <img src="img/application/m19.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+                <div class="logo_line1_2 logo_box_S">
+                    <a href="application/car(20).html">
+                        <img src="img/application/m20.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+                <div class="logo_line1_3 logo_box_S">
+                    <a href="application/car(21).html">
+                        <img src="img/application/m21.png" class="inside_logoimg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="footer">
+        <div class="info">
+            <span>地址: 台中市西屯區西林巷63-30號</span>
+            <span>傳真: +886-4-24637856</span>
+            <span>電話: +886-4-24632111</span>
+            <span>信箱: info@wat.com.tw</span>
+        </div>
+        <div class="copyright">
+            Copyright © 2018 WAT RACING.All Rights Reserved.
+        </div>
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.animsition.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+    <script>
+        $(".technical, .about, .product, .news ").hover(function () {
+            $(".application").css("font-size", "20px");
+        }, function () {
+            $(".application").css("font-size", "30px");
+        });
+    </script>
+
+</body>
+
+</html>

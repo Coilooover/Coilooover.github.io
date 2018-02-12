@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>技術特色 | 貝爾適</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/animsition.min.css">
+
+    <link rel="shortcut icon" href="img/icon/貝爾適.ico">
+
+    <style>
+        * {
+            font-family: Arial, "微軟正黑體", "Microsoft JhengHei", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "標楷體", DFKai-SB, sans-serif;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+        }
+
+
+        .navbar {
+            width: 1130px;
+            height: 50px;
+            font-size: 20px;
+            background-color: #29ABE2;
+            display: flex;
+            margin: 40px 0;
+            position: relative;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 4;
+        }
+
+        .navbar a {
+            width: 20%;
+            text-decoration: none;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 6;
+        }
+
+        .technical {
+            font-size: 30px;
+        }
+
+        .thisPage {
+            width: 18%;
+            height: 80px;
+            border-radius: 100%;
+            background-color: white;
+            overflow: hidden;
+            position: absolute;
+            top: -15px;
+            left: 21%;
+            z-index: 5;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-out;
+        }
+
+        .product:hover,
+        .application:hover,
+        .news:hover,
+        .about:hover {
+            font-size: 30px;
+        }
+
+        .product:hover~.thisPage {
+            left: 1%;
+        }
+
+        .application:hover~.thisPage {
+            left: 41%;
+        }
+
+        .news:hover~.thisPage {
+            left: 61%;
+        }
+
+        .about:hover~.thisPage {
+            left: 81%;
+        }
+
+        .home {
+            width: 200px;
+            height: 70px;
+            margin-top: 50px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .home img {
+            width: 200px;
+            height: 70px;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .title1,
+        .title2 {
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            padding: 40px 0;
+        }
+
+        .picbox {
+            height: 300px;
+            width: 600px;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .pic_left,
+        .pic_right {
+            height: 100%;
+            width: 240px;
+            background-size: cover;
+        }
+
+        .pic_left {
+            float: left;
+            background-image: url("img/features/features_A.jpg");
+        }
+
+        .pic_left_img,
+        .pic_right_img {
+            height: 100%;
+            width: 100%;
+            filter: brightness(50%);
+            transition: 1s;
+        }
+
+        .pic_left:hover .pic_left_img,
+        .pic_right:hover .pic_right_img {
+            filter: brightness(100%)
+        }
+
+        .pic_right {
+            float: right;
+            background-image: url("img/features/features_B.jpg");
+        }
+
+        .swiper-container {
+            max-width: 1130px;
+            width: 100%;
+            height: 550px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #FFF;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .swiper-slide1 {
+            background-image: url("img/report/report_1.jpg");
+        }
+
+        .swiper-slide2 {
+            background-image: url("img/report/report_2.jpg");
+        }
+
+        .swiper-slide3 {
+            background-image: url("img/report/report_3.jpg");
+        }
+
+        .swiper-slide4 {
+            background-image: url("img/report/report_4.jpg");
+        }
+
+        .swiper-slide5 {
+            background-image: url("img/report/report_5.jpg");
+        }
+
+        .swiper-slide6 {
+            background-image: url("img/report/report_6.jpg");
+        }
+
+        .swiper-slide7 {
+            background-image: url("img/report/report_7.jpg");
+        }
+
+        .swiper-slide8 {
+            background-image: url("img/report/report_8.jpg");
+        }
+
+        .swiper-slide9 {
+            background-image: url("img/report/report_9.jpg");
+        }
+
+        .swiper-slide10 {
+            background-image: url("img/report/report_10.jpg");
+        }
+
+        .footer {
+            width: 100%;
+            height: 80px;
+            background-color: #CCCCCC;
+            font-size: 18px;
+            position: relative;
+            bottom: 0;
+            margin-top: 150px;
+        }
+
+        .info {
+            max-width: 1130px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .copyright {
+            max-width: 1130px;
+            width: 100%;
+            margin: 35px auto 0 auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container animsition">
+        <div class="navbar">
+            <a href="product.html" class="animsition-link product" data-animsition-out="fade-out-left">產品介紹</a>
+            <a href="technical.html" class="animsition-link technical" data-animsition-out="fade-out-right">技術特色</a>
+            <a href="application.html" class="animsition-link application" data-animsition-out="fade-out-down">車型型號</a>
+            <a href="news.html" class="animsition-link news" data-animsition-out="zoom-out">車隊快訊</a>
+            <a href="about.html" class="animsition-link about" data-animsition-out="fade-out-up">關於我們</a>
+            <div class="thisPage"></div>
+        </div>
+
+        <div class="home">
+            <a href="index.html">
+                <img src="img/logo/logo.jpg" alt="" srcset="">
+            </a>
+        </div>
+        <div class="title1">避震器特色介紹</div>
+        <div class="picbox">
+            <div class="pic_left">
+                <a href="img/features/features_A.jpg" data-lightbox="image-1" data-title="避震器特色A">
+                    <img src="img/features/features_A.jpg" class="pic_left_img" alt="">
+                </a>
+            </div>
+            <div class="pic_right">
+                <a href="img/features/features_B.jpg" data-lightbox="image-1" data-title="避震器特色B">
+                    <img src="img/features/features_B.jpg" class="pic_right_img" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="title2">測試報告證書</div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slide1"></div>
+                <div class="swiper-slide swiper-slide2"></div>
+                <div class="swiper-slide swiper-slide3"></div>
+                <div class="swiper-slide swiper-slide4"></div>
+                <div class="swiper-slide swiper-slide5"></div>
+                <div class="swiper-slide swiper-slide6"></div>
+                <div class="swiper-slide swiper-slide7"></div>
+                <div class="swiper-slide swiper-slide8"></div>
+                <div class="swiper-slide swiper-slide9"></div>
+                <div class="swiper-slide swiper-slide10"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="info">
+            <span>地址: 台中市西屯區西林巷63-30號</span>
+            <span>傳真: +886-4-24637856</span>
+            <span>電話: +886-4-24632111</span>
+            <span>信箱: info@wat.com.tw</span>
+        </div>
+        <div class="copyright">
+            Copyright © 2018 WAT RACING.All Rights Reserved.
+        </div>
+
+    </div>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/jquery.animsition.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+
+        $(".application, .about, .product, .news ").hover(function () {
+            $(".technical").css("font-size", "20px");
+        }, function () {
+            $(".technical").css("font-size", "30px");
+        });
+    </script>
+
+</body>
+
+</html>

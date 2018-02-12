@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>車隊快訊 | 貝爾適</title>
+    <link rel="stylesheet" href="css/animsition.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+    <link href="css/lightbox.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/icon/貝爾適.ico">
+
+    <style>
+        * {
+            font-family: Arial, "微軟正黑體", "Microsoft JhengHei", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "標楷體", DFKai-SB, sans-serif;
+        }
+
+        body,
+        html {
+            margin: 0;
+        }
+
+        .navbar {
+            width: 1130px;
+            height: 50px;
+            font-size: 20px;
+            background-color: #29ABE2;
+            display: flex;
+            margin: 40px 0;
+            position: relative;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 4;
+        }
+
+        .navbar>a {
+            width: 20%;
+            text-decoration: none;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 6;
+        }
+
+        .navbar ul {
+            width: 20%;
+            list-style: none;
+            z-index: 6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .newContainer {
+            width: 100%;
+            height: 59px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .news {
+            font-size: 30px;
+        }
+
+        .menu {
+            display: none;
+            width: 100%;
+            height: 116px;
+            position: absolute;
+            left: 0;
+            bottom: -119px;
+            font-size: 30px;
+            background-color: rgb(139, 137, 137);
+
+        }
+
+        .menu li {
+
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .newContainer:hover .menu,
+        .menu:hover {
+            display: block;
+        }
+
+
+
+        .thisPage {
+            width: 18%;
+            height: 80px;
+            border-radius: 100%;
+            background-color: white;
+            overflow: hidden;
+            position: absolute;
+            top: -15px;
+            left: 61%;
+            z-index: 5;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-out;
+        }
+
+        .technical:hover,
+        .application:hover,
+        .product:hover,
+        .about:hover {
+            font-size: 30px;
+        }
+
+        .technical:hover~.thisPage {
+            left: 21%;
+        }
+
+        .application:hover~.thisPage {
+            left: 41%;
+        }
+
+        .product:hover~.thisPage {
+            left: 1%;
+        }
+
+        .about:hover~.thisPage {
+            left: 81%;
+        }
+
+        .home {
+            width: 200px;
+            height: 70px;
+            margin-left: 50%;
+            margin-top: 40px;
+            margin-bottom: 80px;
+            transform: translateX(-50%);
+        }
+
+        .home img {
+            width: 200px;
+            height: 70px;
+        }
+
+        .content {
+            max-width: 980px;
+            height: 550px;
+            width: 100%;
+            margin: 10px auto;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .footer {
+            width: 100%;
+            height: 80px;
+            background-color: #CCCCCC;
+            font-size: 18px;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .info {
+            max-width: 1130px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .copyright {
+            max-width: 1130px;
+            width: 100%;
+            margin: 35px auto 0 auto;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container animsition">
+        <div class="navbar">
+            <a href="product.html" class="animsition-link product" data-animsition-out="fade-out-left">產品介紹</a>
+            <a href="technical.html" class="animsition-link technical" data-animsition-out="fade-out-right">技術特色</a>
+            <a href="application.html" class="animsition-link application" data-animsition-out="fade-out-down">車型型號</a>
+            <ul>
+                <div class="newContainer">
+                    <div class="news">
+                        <li>
+                            <a href="fruition.html" class="animsition-link" data-animsition-out="zoom-out">成果展示</a>
+                        </li>
+                    </div>
+                    <div class="menu">
+                        <li style="border-bottom:solid 2px white">
+                            <a href="exhibition.html" class="animsition-link" data-animsition-out="zoom-out">展覽訊息</a>
+                        </li>
+                        <li>
+                            <a href="news.html" class="animsition-link" data-animsition-out="zoom-out">車隊快訊</a>
+                        </li>
+                    </div>
+                </div>
+
+
+            </ul>
+            <a href="about.html" class="animsition-link about" data-animsition-out="fade-out-up">關於我們</a>
+            <div class="thisPage"></div>
+        </div>
+
+        <div class="home">
+            <a href="index.html">
+                <img src="img/logo/logo.jpg" alt="LOGO" srcset="">
+            </a>
+        </div>
+
+        <div class="content">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition.jpg" data-lightbox="image-1" data-title="BENZ G63 AMG 底盤調校">
+                            <img src="img/news/Fruition.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition2.jpg" data-lightbox="image-1" data-title="BENZ G63 AMG 底盤調校">
+                            <img src="img/news/Fruition2.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition3.jpg" data-lightbox="image-1" data-title="BENZ G63 AMG 底盤調校">
+                            <img src="img/news/Fruition3.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition4.jpg" data-lightbox="image-1" data-title="BENZ G63 AMG 底盤調校">
+                            <img src="img/news/Fruition4.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition5.jpg" data-lightbox="image-2" data-title="Luxgen u6 安裝專屬研發WAT避震器">
+                            <img src="img/news/Fruition5.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition6.jpg" data-lightbox="image-2" data-title="Luxgen u6 安裝專屬研發WAT避震器">
+                            <img src="img/news/Fruition6.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition7.jpg" data-lightbox="image-2" data-title="Luxgen u6 安裝專屬研發WAT避震器">
+                            <img src="img/news/Fruition7.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition8.jpg" data-lightbox="image-2" data-title="Luxgen u6 安裝專屬研發WAT避震器">
+                            <img src="img/news/Fruition8.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition9.jpg" data-lightbox="image-2" data-title="Luxgen u6 安裝專屬研發WAT避震器">
+                            <img src="img/news/Fruition9.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition10.jpg" data-lightbox="image-2" data-title="Luxgen u6 安裝專屬研發WAT避震器">
+                            <img src="img/news/Fruition10.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition11.jpg" data-lightbox="image-2" data-title="Luxgen u6 安裝專屬研發WAT避震器">
+                            <img src="img/news/Fruition11.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition12.jpg" data-lightbox="image-2" data-title="Luxgen u6 安裝專屬研發WAT避震器">
+                            <img src="img/news/Fruition12.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition13.jpg" data-lightbox="image-2" data-title="Luxgen u6 安裝專屬研發WAT避震器">
+                            <img src="img/news/Fruition13.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition14.jpg" data-lightbox="image-2" data-title="Luxgen u6 安裝專屬研發WAT避震器">
+                            <img src="img/news/Fruition14.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition15.jpg" data-lightbox="image-2" data-title="Luxgen u6 安裝專屬研發WAT避震器">
+                            <img src="img/news/Fruition15.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition16.jpg" data-lightbox="image-2" data-title="Luxgen u6 安裝專屬研發WAT避震器">
+                            <img src="img/news/Fruition16.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition17.jpg" data-lightbox="image-2" data-title="Luxgen u6 安裝專屬研發WAT避震器">
+                            <img src="img/news/Fruition17.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition18.jpg" data-lightbox="image-2" data-title="Luxgen u6 安裝專屬研發WAT避震器">
+                            <img src="img/news/Fruition18.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition19.jpg" data-lightbox="image-3" data-title="Infiniti FX37 安裝 WAT避震器">
+                            <img src="img/news/Fruition19.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition20.jpg" data-lightbox="image-3" data-title="Infiniti FX37 安裝 WAT避震器">
+                            <img src="img/news/Fruition20.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition21.jpg" data-lightbox="image-3" data-title="Infiniti FX37 安裝 WAT避震器">
+                            <img src="img/news/Fruition21.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition22.jpg" data-lightbox="image-3" data-title="Infiniti FX37 安裝 WAT避震器">
+                            <img src="img/news/Fruition22.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition23.jpg" data-lightbox="image-3" data-title="Infiniti FX37 安裝 WAT避震器">
+                            <img src="img/news/Fruition23.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition24.jpg" data-lightbox="image-4" data-title="Subaru Forester 安裝【客製化WAT避震器 】">
+                            <img src="img/news/Fruition24.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition25.jpg" data-lightbox="image-4" data-title="Subaru Forester 安裝【客製化WAT避震器 】">
+                            <img src="img/news/Fruition25.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition26.jpg" data-lightbox="image-4" data-title="Subaru Forester 安裝【客製化WAT避震器 】">
+                            <img src="img/news/Fruition26.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition27.jpg" data-lightbox="image-4" data-title="Subaru Forester 安裝【客製化WAT避震器 】">
+                            <img src="img/news/Fruition27.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition28.jpg" data-lightbox="image-4" data-title="Subaru Forester 安裝【客製化WAT避震器 】">
+                            <img src="img/news/Fruition28.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition29.jpg" data-lightbox="image-4" data-title="Subaru Forester 安裝【客製化WAT避震器 】">
+                            <img src="img/news/Fruition29.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition30.jpg" data-lightbox="image-4" data-title="Subaru Forester 安裝【客製化WAT避震器 】">
+                            <img src="img/news/Fruition30.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition31.jpg" data-lightbox="image-4" data-title="Subaru Forester 安裝【客製化WAT避震器 】">
+                            <img src="img/news/Fruition31.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition32.jpg" data-lightbox="image-4" data-title="Subaru Forester 安裝【客製化WAT避震器 】">
+                            <img src="img/news/Fruition32.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition33.jpg" data-lightbox="image-4" data-title="Subaru Forester 安裝【客製化WAT避震器 】">
+                            <img src="img/news/Fruition33.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition34.jpg" data-lightbox="image-4" data-title="Subaru Forester 安裝【客製化WAT避震器 】">
+                            <img src="img/news/Fruition34.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition35.jpg" data-lightbox="image-4" data-title="Subaru Forester 安裝【客製化WAT避震器 】">
+                            <img src="img/news/Fruition35.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/news/Fruition36.jpg" data-lightbox="image-4" data-title="Subaru Forester 安裝【客製化WAT避震器 】">
+                            <img src="img/news/Fruition36.jpg" alt="成果展示" srcset="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="info">
+            <span>地址: 台中市西屯區西林巷63-30號</span>
+            <span>傳真: +886-4-24637856</span>
+            <span>電話: +886-4-24632111</span>
+            <span>信箱: info@wat.com.tw</span>
+        </div>
+        <div class="copyright">
+            Copyright © 2018 WAT RACING.All Rights Reserved.
+        </div>
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.animsition.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+
+    <script>
+        $(".technical, .about, .application, .product").hover(function () {
+            $(".news").css("font-size", "20px");
+        }, function () {
+            $(".news").css("font-size", "30px");
+        });
+        $(".newContainer").hover(function () {
+            $(".thisPage").css("display", "none");
+        }, function () {
+            $(".thisPage").css("display", "block");
+        });
+
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 350,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+
+
+        lightbox.option({
+            'positionFromTop': 250,
+            'maxWidth': 1000,
+            'wrapAround': true
+        })
+    </script>
+</body>
+
+</html>
