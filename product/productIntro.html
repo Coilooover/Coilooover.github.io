@@ -259,7 +259,7 @@
 
             <div class="home">
                 <a href="../index.html">
-                    <img src="../img/logo/logo.jpg" alt="" srcset="">
+                    <img src="../img/logo/logo.png" alt="" srcset="">
                 </a>
             </div>
 
@@ -1293,7 +1293,6 @@
     <script src="../js/jquery.popmenu.min.js"></script>
     <script src="../js/jquery.quick-modal.js"></script>
     <script>
-
         $(function () {
             if ($('html').hasClass('csstransforms3d')) {
                 $('.proGroup').removeClass('slide').addClass('flip');
@@ -1402,7 +1401,10 @@
         });
 
         $(function () {
-            $('#navbar').popmenu({ 'width': '500px', 'iconSize': '250px' });
+            $('#navbar').popmenu({
+                'width': '500px',
+                'iconSize': '250px'
+            });
             // 'controller': true,       //设定是否使用控制按钮，设置为false，菜单将一直显示
             // 'width': '300px',         //菜单总宽度
             // 'background': '#34495e',  //菜单背景色
